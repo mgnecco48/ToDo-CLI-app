@@ -84,7 +84,7 @@ Tasks are saved in a human-readable format:
 
 Each line is parsed into a Python dictionary:
 
-```python
+```
 {"text": "Buy milk", "done": True}
 ```
 
@@ -97,7 +97,7 @@ The tool uses `prompt_toolkit` dialogs:
 
 Themes are defined using:
 
-```python
+```
 Style.from_dict({...})
 ```
 
@@ -117,23 +117,43 @@ to the correct style name.
 
 ## 🎨 Themes
 
-You can customize the entire look by editing:
+This project includes several **built-in color themes**, allowing you to customize how the dialogs look.  
+Each theme controls:
 
-```python
-dialog_style = Style.from_dict({...})
+- dialog background  
+- text color  
+- frame label color  
+- shadow color  
+
+### Available Built-In Themes
+
+Your script already defines the following themes:
+
 ```
+matrix_style
+solarized_dark
+sunset
+pastel_breeze
+hacker
+terminal_amber```
 
-Example:
+### How to apply a theme
+Inside the script, the active theme is determined by the line:
 
-```python
-terminal_amber = Style.from_dict({
-    "dialog": "bg:#000000 #ffbf00",
-    "dialog frame.label": "bg:#1a0f00 #ffcc33",
-    "dialog.body": "bg:#000000 #ffbf00",
-    "dialog shadow": "bg:#260f00",
-})
 ```
+dialog_style = matrix_style```
 
+To use a different theme, simply change the name:
+
+```
+dialog_style = terminal_amber```
+
+or:
+
+```
+dialog_style = solarized_dark````
+
+Every dialog (radiolist_dialog, input_dialog, yes_no_dialog, etc.) uses this dialog_style, so changing it here updates the entire application.
 ---
 
 ## 🛠 Future Improvements

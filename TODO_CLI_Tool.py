@@ -50,6 +50,9 @@ terminal_amber = Style.from_dict({
     "dialog shadow": "bg:#260f00",
 })
 
+# To change the theme for all dialogs:
+dialog_style = matrix_style
+
 
 def load_tasks(filepath):
     """Load tasks from file in human-readable format."""
@@ -129,7 +132,7 @@ def main():
                 ("clear", "Clear all tasks"),
                 ("quit", "Save + Quit"),
             ],
-            style=matrix_style,
+            style=dialog_style,
         ).run()
 
         if choice is None:
@@ -140,7 +143,7 @@ def main():
             new_text = input_dialog(
                 title="Add Task",
                 text="Enter the new task:",
-                style=matrix_style,
+                style=dialog_style,
             ).run()
 
             if new_text:
@@ -164,7 +167,7 @@ def main():
                 title="Toggle Task",
                 text="Select a task to mark as done/undone:",
                 values=values,
-                style=matrix_style,
+                style=dialog_style,
             ).run()
 
             if toggle_choice:
@@ -189,7 +192,7 @@ def main():
                 title="Remove Task",
                 text="Select a task:",
                 values=values,
-                style=matrix_style,
+                style=dialog_style,
             ).run()
 
             if remove_choice:
@@ -204,7 +207,7 @@ def main():
             confirm = yes_no_dialog(
                 title="Confirm",
                 text="Delete ALL tasks?",
-                style=matrix_style,
+                style=dialog_style,
             ).run()
 
             if confirm:
