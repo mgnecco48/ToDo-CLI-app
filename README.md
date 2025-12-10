@@ -145,6 +145,7 @@ dialog_style = solarized_dark
 ````
 
 Every dialog (radiolist_dialog, input_dialog, yes_no_dialog, etc.) uses this dialog_style, so changing it here updates the entire application.
+
 ---
 
 ## 🛠 Future Improvements
