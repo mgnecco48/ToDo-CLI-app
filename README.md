@@ -100,19 +100,6 @@ Themes are defined using:
 ```
 Style.from_dict({...})
 ```
-
-You can easily switch between themes like:
-
-- Matrix Green  
-- Terminal Amber  
-- Dracula  
-- Solarized  
-- Ice Blue  
-- Cyberpunk  
-
-Just change all occurences (Except for the theme creation) of the current theme,
-to the correct style name.
-
 ---
 
 ## 🎨 Themes
@@ -135,23 +122,27 @@ solarized_dark
 sunset
 pastel_breeze
 hacker
-terminal_amber```
+terminal_amber
+```
 
 ### How to apply a theme
 Inside the script, the active theme is determined by the line:
 
 ```
-dialog_style = matrix_style```
+dialog_style = matrix_style
+```
 
 To use a different theme, simply change the name:
 
 ```
-dialog_style = terminal_amber```
+dialog_style = terminal_amber
+```
 
 or:
 
 ```
-dialog_style = solarized_dark````
+dialog_style = solarized_dark
+````
 
 Every dialog (radiolist_dialog, input_dialog, yes_no_dialog, etc.) uses this dialog_style, so changing it here updates the entire application.
 ---
