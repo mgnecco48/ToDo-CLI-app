@@ -110,6 +110,9 @@ You can easily switch between themes like:
 - Ice Blue  
 - Cyberpunk  
 
+Just change all occurences (Except for the theme creation) of the current theme,
+to the correct style name.
+
 ---
 
 ## 🎨 Themes
@@ -120,7 +123,7 @@ You can customize the entire look by editing:
 dialog_style = Style.from_dict({...})
 ```
 
-Example (Amber CRT):
+Example:
 
 ```python
 terminal_amber = Style.from_dict({
