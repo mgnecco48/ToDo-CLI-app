@@ -5,6 +5,11 @@ This project demonstrates how to build a modern CLI application with dialogs, co
 
 ---
 
+## 🎬 DEMO
+![TODO CLI Demo](docs/todo_demo.gif)
+
+---
+
 ## ✨ Features
 
 - ✔ Interactive menu using radiolist dialogs  
