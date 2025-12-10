@@ -1,0 +1,3 @@
+✔ Improve todo list a little bit.
+✖ Do 2 leetcode problems.
+✖ Learn a bit about ml
